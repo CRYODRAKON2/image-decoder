@@ -1,0 +1,13 @@
+  CommandLine cmd (__FILE__);
+  cmd.AddValue ("maxBytes",
+                "Total number of bytes for application to send", maxBytes);
+    cmd.AddValue ("datarate",
+                "the datarate", datarate);
+    cmd.AddValue ("delay",
+                "the delay", delay);
+  cmd.Parse (argc, argv);
+  
+
+./waf --run "scratch/l5q1 --maxBytes=512 --datarate=10 --delay=1"
+
+./waf --run "scratch/l6q1 --printRoutingTables=true"
